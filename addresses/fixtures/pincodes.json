@@ -1,0 +1,5 @@
+[
+  {"model": "addresses.pincode", "pk": 1, "fields": {"pincode": "110001", "district": "New Delhi", "state": "Delhi", "country": "India"}},
+  {"model": "addresses.pincode", "pk": 2, "fields": {"pincode": "560001", "district": "Bangalore Urban", "state": "Karnataka", "country": "India"}}
+]
+
