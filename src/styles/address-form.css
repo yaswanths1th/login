@@ -1,0 +1,106 @@
+/* === Address Form Styling === */
+
+.address-form {
+  background: #ffffff;
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 32px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.address-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #0a66c2;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.address-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.address-form input,
+.address-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: 15px;
+}
+
+.address-form input:focus,
+.address-form select:focus {
+  border-color: #0a66c2;
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.15);
+}
+
+.address-form .error-message {
+  color: #d93025;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  background: rgba(217, 48, 37, 0.08);
+  padding: 6px 10px;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+.address-form button {
+  display: block;
+  width: 100%;
+  margin-top: 1.8rem;
+  padding: 12px;
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.25s ease, transform 0.2s;
+}
+
+.address-form button:hover {
+  background-color: #084d96;
+  transform: translateY(-1px);
+}
+
+.address-form button:disabled {
+  background-color: #9fb8d3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
+  .address-form {
+    padding: 24px 20px;
+    margin: 20px;
+  }
+
+  .address-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .address-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* === Optional Loader === */
+.address-form button:disabled::after {
+  content: " ⏳";
+}

@@ -1,10 +1,7 @@
 from django.urls import path
-from .views import LocationDetailsView, AddressCreateView, ValidationRulesView, ValidationErrorsView
+from .views import AddressListCreateView, get_location_by_pincode
 
 urlpatterns = [
-    path("location/", LocationDetailsView.as_view(), name="address-location"),
-    path("", AddressCreateView.as_view(), name="address-create"),
-    path("rules/", ValidationRulesView.as_view(), name="address-rules"),
-    path("errors/", ValidationErrorsView.as_view(), name="address-errors"),
+    path("", AddressListCreateView.as_view(), name="address-list-create"),  # POST to /api/addresses/
+    path("pincode/", get_location_by_pincode, name="get-location-by-pincode"),  # GET /api/addresses/pincode/?pincode=110001
 ]
-
